@@ -26,8 +26,6 @@ Clone the repository and install the production requirements using pip:
 ```bash
 pip install translators keyboard pyinstaller
 
----
-
 ```
 ## 📅 Changelog
 
