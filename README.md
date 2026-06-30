@@ -25,3 +25,27 @@ The user interface utilizes a frameless overlay design with zero taskbar footpri
 Clone the repository and install the production requirements using pip:
 ```bash
 pip install translators keyboard pyinstaller
+
+---
+
+## 📅 Changelog
+
+### [v2.0.0] - Ultimate Production Edition (Current)
+* **Golden Left-Hand Hotkey Flow**: Migrated all standard hotkeys to ` ` ` + Number` combinations to completely eliminate typing conflicts with daily workflows.
+  * `` ` + 1 ``: Auto-copy & instant **English to Traditional Chinese** translation (logs to Vocabulary DB).
+  * `` ` + 2 ``: Spawns an **on-demand Chinese-to-English** input dialog; auto-destroys upon Enter submission.
+  * `` ` + 3 ``: Instantly toggles the interactive **Vocabulary Database Log** window.
+  * `` ` + 4 ``: Safe-exit macro that instantly terminates the entire background process.
+* **Intelligent Dynamic HUD Sizing**: 
+  * The HUD notification window now automatically calculates text row count and dynamically scales its height.
+  * Implemented an upward-growth positioning algorithm to ensure the card stays pinned perfectly to the bottom-right corner without clipping off-screen.
+  * Enforced a hard `max_height` ceiling to allow smooth text scrolling for long-form paragraphs.
+* **Interactive Vocabulary DB Management**:
+  * Enhanced the log window with a responsive, dedicated layout featuring a smooth **vertical scrollbar** and full **mouse-wheel scrolling** support.
+  * Embedded an instant **"❌ Delete" button** for each logged entry, allowing users to wipe accidentally triggered words from the local `vocabulary_log.txt` on the fly.
+* **Architecture Stability**: Added safety toggle locks (`is_input_active`, `is_vocab_open`) to strictly prevent multi-window layering glitches from accidental rapid keystrokes.
+
+### [v1.0.0] - Initial Prototype Release
+* Implemented the baseline asynchronous `keyboard` hook listener thread.
+* Created the frameless `overrideredirect` Tkinter window with automatic 5-second fade/demote timer.
+* Integrated lightweight web translation endpoints with basic `vocabulary_log.txt` storage.
