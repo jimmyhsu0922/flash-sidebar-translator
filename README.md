@@ -28,6 +28,7 @@ pip install translators keyboard pyinstaller
 
 ---
 
+```
 ## 📅 Changelog
 
 ### [v2.0.0] - Ultimate Production Edition (Current)
@@ -49,3 +50,4 @@ pip install translators keyboard pyinstaller
 * Implemented the baseline asynchronous `keyboard` hook listener thread.
 * Created the frameless `overrideredirect` Tkinter window with automatic 5-second fade/demote timer.
 * Integrated lightweight web translation endpoints with basic `vocabulary_log.txt` storage.
+```
